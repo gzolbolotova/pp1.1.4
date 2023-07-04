@@ -10,8 +10,11 @@ public class Util {
     public static Connection getConnection(){
         Connection connection = null;
         try {
+            final String url = "jdbc:mysql://localhost:3306/bdforpp";
+            final String user = "root1";
+            final String password = "root1";
             connection= DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/bdforpp","root1","root1");
+                    url,user,password);
            //System.out.println("Подключено");
         } catch (SQLException e) {
             throw new RuntimeException(e);
